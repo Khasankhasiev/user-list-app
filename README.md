@@ -9,7 +9,7 @@
 1. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/your-username/user-list-app.git
+   git clone https://github.com/Khasankhasiev/user-list-app.git
    cd user-list-app
 2. Запустите проект:
    ```bash
