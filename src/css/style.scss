@@ -94,18 +94,6 @@ td {
     td {
         display: block;
         text-align: center;
-        position: relative;
-    }
-
-    th::before,
-    td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 10px;
-        width: 45%;
-        text-align: left;
-        font-weight: bold;
-        white-space: nowrap;
     }
 
     th {
@@ -119,9 +107,7 @@ td {
     }
 
     td {
-        border: none;
         border-bottom: 1px solid #ddd;
-        position: relative;
     }
 
     td:last-child {
