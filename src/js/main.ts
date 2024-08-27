@@ -9,6 +9,10 @@ interface User {
         street: string;
         city: string;
         zipcode: string;
+        geo: {
+            lat: string;
+            lng: string;
+        };
     };
     company: {
         name: string;
@@ -35,11 +39,12 @@ function renderTable(data: User[]) {
     const tbody = document.querySelector('#userTable tbody') as HTMLElement;
     tbody.innerHTML = '';
     data.forEach(user => {
+        const mapLink = `https://www.google.com/maps?q=${user.address.geo.lat},${user.address.geo.lng}`;
         const row = document.createElement('tr');
         row.innerHTML = `
       <td>${user.name}</td>
-      <td><a style='text-decoration:none' href="mailto:${user.email}">${user.email}</a></td>
-      <td class='address'>Улица <span class='plate street'>${user.address.street}</span> Индекс <span class='plate zipcode'>${user.address.zipcode}</span></td>
+      <td><a href="mailto:${user.email}">${user.email}</a></td>
+      <td class='address'><a href="${mapLink}" target="_blank">Улица <span class='plate street'>${user.address.street}</span> Индекс <span class='plate zipcode'>${user.address.zipcode}</span></td>
       <td>${user.company.name}</td>
     `;
         tbody.appendChild(row);
