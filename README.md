@@ -13,4 +13,4 @@
    cd user-list-app
 2. Запустите проект:
    ```bash
-npm start
+   npm start
