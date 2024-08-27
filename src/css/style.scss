@@ -69,7 +69,6 @@ td {
 
 // Адаптивные стили
 @media (max-width: 768px) {
-    // Планшеты
     table {
         font-size: 14px;
     }
@@ -81,7 +80,6 @@ td {
 }
 
 @media (max-width: 550px) {
-    // Мобильные устройства
     .header {
         font-size: 24px;
     }
@@ -94,12 +92,6 @@ td {
         padding: 8px;
     }
 
-    // Добавление горизонтальной прокрутки для таблицы
-    .table-container {
-        overflow-x: auto;
-    }
-
-    // Визуальное упрощение таблицы
     th,
     td {
         display: block;
