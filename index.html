@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User List App</title>
+        <link rel="stylesheet" href="./src/css/style.scss" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="header">Список пользователей</h1>
+            <button class="refresh-button" onclick="refreshData()">
+                Перезагрузить
+            </button>
+            <div class="table-container">
+                <table id="userTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable('name')">ФИО</th>
+                            <th onclick="sortTable('email')">Email</th>
+                            <th onclick="sortTable('address')">Адрес</th>
+                            <th onclick="sortTable('company')">Компания</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- тело добавляется в main.ts файле -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script type="module" src="./src/js/main.ts"></script>
+    </body>
+</html>
